@@ -1,0 +1,21 @@
+<form ng-submit="$ctrl.addCategory($ctrl.newCategory)">
+    <div class="input-group">
+        <label class="form-inline">
+            New category
+            <input type="text"
+                   name="name"
+                   class="form-control"
+                   ng-model="$ctrl.newCategory">
+            <div class="input-group-btn">
+                <button type="submit" class="btn btn-primary">
+                    Add
+                </button>
+            </div>
+        </label>
+    </div>
+</form>
+
+<ok-table header="$ctrl.headers"
+          data="$ctrl.categories"
+          on-remove="$ctrl.removeCategory(item)">
+</ok-table>

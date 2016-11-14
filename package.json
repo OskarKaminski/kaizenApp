@@ -5,7 +5,7 @@
   "main": "wallaby.js",
   "scripts": {
     "start": "npm run scripts && npm run server",
-    "server": "webpack-dev-server",
+    "server": "webpack-dev-server --content-base public/",
     "scripts": "webpack -w"
   },
   "author": "",
@@ -28,6 +28,7 @@
   "dependencies": {
     "angular": "^1.5.7",
     "angular-ui-router": "^0.3.1",
+    "angularfire": "^2.1.0",
     "bootstrap": "^3.3.6",
     "jquery": "^3.1.1",
     "lodash": "^4.13.1",
