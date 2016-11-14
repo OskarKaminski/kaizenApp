@@ -2,7 +2,8 @@ import angular from 'angular';
 import 'angular-ui-router';
 import 'bootstrap/dist/css/bootstrap.css';
 import categoriesComponent from './pages/categories/categories.page';
-import {manageCategories} from './pages/manage-categories/manage-categories';
+import {manageCategories} from './pages/admin/manage-categories/manage-categories';
+import {manageCourses} from './pages/admin/manage-courses/manage-courses';
 
 // Modules
 import './components/components.module';
@@ -15,6 +16,7 @@ angular.module('app', ['ui.router',
     'services'])
     .component('categories', categoriesComponent)
     .component('manageCategories', manageCategories)
+    .component('manageCourses', manageCourses)
     .config(routerConfig);
 
 
@@ -28,6 +30,10 @@ function routerConfig($stateProvider,
         .state('ManageCategories', {
             url: '/manage-categories',
             template: '<manage-categories></manage-categories>'
+        })
+        .state('ManageCourses', {
+            url: '/manage-courses',
+            template: '<manage-courses></manage-courses>'
         });
 
     $urlRouterProvider.otherwise('/categories');
